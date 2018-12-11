@@ -7,12 +7,13 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build("chakri276/wrfdocker")
-                app.inside {
-                    sh 'echo $(curl localhost:8080)'
-                   }
+                    app = docker.build("chakri276/wrf")
+                    app.inside {
+                        sh 'echo $(curl localhost:8080)'
+                    }
+                }
             }
-           }
+        }
         stage('Push Docker Image') {
             when {
                 branch 'master'
@@ -28,4 +29,3 @@ pipeline {
         }
       }
     }
-  }
