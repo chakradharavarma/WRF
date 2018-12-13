@@ -79,10 +79,10 @@ ENV NCARG_ROOT /usr/local
 #
 #
 # Download wrf and wps source, Version 4.0 and later
-RUN curl -SL https://github.com/wrf-model/WPS/archive/v$WRF_VERSION.tar.gz | tar zxC /wrf \
- && curl -SL https://github.com/wrf-model/WRF/archive/v$WRF_VERSION.tar.gz | tar zxC /wrf
-RUN mv /wrf/WPS-$WRF_VERSION /wrf/WPS
-RUN mv /wrf/WRF-$WRF_VERSION /wrf/WRF
+#RUN curl -SL https://github.com/wrf-model/WPS/archive/v$WRF_VERSION.tar.gz | tar zxC /wrf \
+# && curl -SL https://github.com/wrf-model/WRF/archive/v$WRF_VERSION.tar.gz | tar zxC /wrf
+#RUN mv /wrf/WPS-$WRF_VERSION /wrf/WPS
+#RUN mv /wrf/WRF-$WRF_VERSION /wrf/WRF
 ENV NETCDF_classic 1
 #
 # 
